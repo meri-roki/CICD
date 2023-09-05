@@ -1,0 +1,17 @@
+persistence:
+  enabled: true
+  storageClassName: <your-storage-class-name>
+  size: 10Gi
+
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: Traefik
+  hosts:
+  - host: <your-hostname>
+    paths:
+    - path: /
+  tls:
+  - secretName: <your-tls-secret>
+    hosts:
+    - <your-hostname>

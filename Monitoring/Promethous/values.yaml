@@ -1,0 +1,10 @@
+
+server:
+  storageSpec:
+    volumeClaimTemplate:
+      spec:
+        storageClassName: <your-storage-class-name>
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 10Gi
